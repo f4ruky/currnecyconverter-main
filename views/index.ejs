@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../currencyconcertor/css/index.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" href="">
+  <script src="../lib/jquery-3.6.1.min.js"></script>
+
+  <title>Döviz Çevirici</title>
+
+</head>
+<div class="container1">
+  <nav class="navbar navbar-expand-lg bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Döviz Çevirici</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <!-- <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Ana Sayfa</a>
+          </li> -->
+          <li class="nav-item">
+            <a class="nav-link" href="#">Hakkımızda</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Para Birimleri
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#about">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled">Gizlilik</a>
+          </li>
+        </ul>
+        <!-- <form class="d-flex" role="search">
+          <input class="form-control mt-2 me-2" type="search" placeholder="Ara" aria-label="Search">
+          <button class="btn btn-outline-success">Ara</button>
+        </form> -->
+        <div class="dropdown-bar">
+          <div class="dropdown">
+            <button onclick="myFunction()" class="dropbtn">Ara</button>
+            <div id="myDropdown" class="dropdown-content">
+              <input type="text" placeholder="Ara.." id="myInput" onkeyup="filterFunction()">
+              <a class ="dropdown-item" id = "linkdolar"href="#dolar" onclick="gotodolar()">Dolar</a>
+              <a href="#Euro">Euro</a>
+              <a href="#TürkLirası">Türk Lirası</a>
+              <a href="#JaponYeni">Japon Yeni</a>
+              <a href="#ArjantinPesosu">Arjantin Pesosu</a>
+              <a href="#Frang">Frang</a>
+              <a href="#Won">Won</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+</div>
+
+<body>
+  <!-- <div class="dropdown-bar">
+    <div class="dropdown">
+      <button onclick="myFunction()" class="dropbtn">Ara</button>
+      <div id="myDropdown" class="dropdown-content">
+        <input type="text" placeholder="Ara.." id="myInput" onkeyup="filterFunction()">
+        <a href="#about">Dolar</a>
+        <a href="#base">Euro</a>
+        <a href="#blog">Türk Lirası</a>
+        <a href="#contact">Japon Yeni</a>
+        <a href="#custom">Arjantin Pesosu</a>
+        <a href="#support">Frang</a>
+        <a href="#tools">Won</a>
+      </div>
+    </div>
+  </div> -->
+  <div class="container">
+    <h1>Döviz Çevirici</h1>
+    <div class="box">
+      <div class="left-box">
+        <select name="currency" class="currency"></select>
+        <input type="number" name="" id="input">
+      </div>
+      <div class="right-box">
+        <select name="currency" class="currency"></select>
+        <input type="number" name="" id="result" disabled>
+      </div>
+    </div>
+    <button class="btn btn-outline-success" id="btn">ÇEVİR</button>
+  </div>
+  <div class="container2">
+    <div class="card-group">
+      <div class="card">
+        <img src="../../images/Unknownsfdgsd.jpeg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Dolar</h5>
+          <p class="card-text">Son dakika dolar haberleri, dolar tl kuru, dolarda son durum, dolarizasyon, dolar
+            yatırımcısı için güncel haberler ve gelişmeler..</p>
+        </div>
+        <div class="card-footer">
+          <small class="text-muted">Son güncelleme 1 dakika önce</small>
+        </div>
+      </div>
+      <div class="card">
+        <img src="../../images/fed.jpeg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">FED</h5>
+          <p class="card-text">Son dakika Fed haberleri ve güncel Fed haberleri burada. fed son dakika haberleri ve en
+            son fed gelişmeleri.</p>
+        </div>
+        <div class="card-footer">
+          <small class="text-muted">Son güncelleme 2 dakika önce</small>
+        </div>
+      </div>
+      <div class="card">
+        <img src="../../images/btc.jpeg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Kripto</h5>
+          <p class="card-text">Kripto paralarda yaşanan düşüşler ve yükselişler ile ilgili son dakika gelişmelerine
+            Döviz Çevirici web sitemizden anında ulaşabilirsiniz.</p>
+        </div>
+        <div class="card-footer">
+          <small class="text-muted">Son güncelleme 3 dakika önce</small>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="../currencyconcertor/js/ConverterOparations.js"></script>
+</body>
+
+</html>

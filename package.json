@@ -1,0 +1,39 @@
+{
+  "name": "currencyconvertor",
+  "version": "1.0.0",
+  "description": "Veri Tabanı Yönetim Sistemleri",
+  "main": "app.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ProjeEkibiFirat/currencyConvertor.git"
+  },
+  "keywords": [
+    "no",
+    "keyword"
+  ],
+  "author": "Fimo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ProjeEkibiFirat/currencyConvertor/issues"
+  },
+  "homepage": "https://github.com/ProjeEkibiFirat/currencyConvertor#readme",
+  "dependencies": {
+    "cookie-parser": "^1.4.6",
+    "ejs": "^3.1.8",
+    "express": "^4.18.2",
+    "fs": "^0.0.1-security",
+    "mongoose": "^6.8.0",
+    "mssql": "^9.0.1",
+    "nodemon": "^2.0.20",
+    "path": "^0.12.7",
+    "uuid": "^9.0.0",
+    "winston": "^3.8.2"
+  }
+}
